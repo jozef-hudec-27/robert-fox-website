@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --GENERAL */
 html {
   @apply font-lato text-[21px] text-black-75;
 }
@@ -35,10 +36,36 @@ h5 {
   @apply text-lg;
 }
 
+.gradient-50 {
+  @apply from-secondary to-primary;
+}
+
+.gradient-75 {
+  @apply from-secondary via-secondary to-primary;
+}
+
 .gradient-text {
-  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  @apply bg-gradient-to-r bg-clip-text text-transparent;
 }
 
 .gradient-bg {
-  @apply bg-gradient-to-r from-primary to-secondary;
+  @apply bg-gradient-to-r;
+}
+/* GENERAL-- */
+
+.button {
+  @apply gradient-bg gradient-50 text-white rounded-full px-[48px] py-[24px] flex items-center gap-[24px];
+  box-shadow: 0px 8px 8px rgba(100, 100, 100, 0.35);
+}
+
+.button svg {
+  @apply text-lg;
+}
+
+.button:hover {
+  @apply gradient-75;
+}
+
+button:active {
+    @apply scale-[0.95]
 }
