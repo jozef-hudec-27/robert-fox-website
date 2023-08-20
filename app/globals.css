@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './styles/button.css';
+
 /* --GENERAL */
 html {
   @apply font-lato text-[21px] text-black-75;
@@ -52,20 +54,3 @@ h5 {
   @apply bg-gradient-to-r;
 }
 /* GENERAL-- */
-
-.button {
-  @apply gradient-bg gradient-50 text-white rounded-full px-[48px] py-[24px] flex items-center gap-[24px];
-  box-shadow: 0px 8px 8px rgba(100, 100, 100, 0.35);
-}
-
-.button svg {
-  @apply text-lg;
-}
-
-.button:hover {
-  @apply gradient-75;
-}
-
-button:active {
-    @apply scale-[0.95]
-}

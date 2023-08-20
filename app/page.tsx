@@ -13,11 +13,13 @@ function IndexPage() {
           likes to get stuff done, let’s talk.
         </p>
 
-        <button className="button mt-[64px]">
+        <button className="btn primary mt-[64px]">
           <span>See my work</span>
           <BsChevronDoubleDown />
         </button>
       </section>
+
+      <div id="el" className="m-12 p-12 rounded-full"></div>
     </div>
   )
 }
