@@ -1,3 +1,4 @@
+import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import { Lato, Josefin_Sans } from 'next/font/google'
 
@@ -12,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${lato.variable} ${josefinSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
