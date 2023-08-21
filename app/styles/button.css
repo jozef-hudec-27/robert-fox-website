@@ -1,5 +1,5 @@
 .btn.primary {
-  @apply text-white rounded-full px-[48px] py-[24px] flex items-center gap-[24px];
+  @apply text-white rounded-full px-[48px] py-[24px] flex items-center justify-center gap-[24px];
   box-shadow: 0px 8px 8px rgba(100, 100, 100, 0.35);
   --gradient-percentage: 0%;
   background: linear-gradient(90deg, #ff6840 var(--gradient-percentage), #ff4c80 100%);

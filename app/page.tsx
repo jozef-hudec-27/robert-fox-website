@@ -13,7 +13,7 @@ function IndexPage() {
           likes to get stuff done, let’s talk.
         </p>
 
-        <button className="btn primary mt-[32px] md:mt-[48px] lg:mt-[64px]">
+        <button className="btn primary w-full sm:w-fit mt-[32px] md:mt-[48px] lg:mt-[64px]">
           <span>See my work</span>
           <BsChevronDoubleDown />
         </button>

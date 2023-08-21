@@ -14,8 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${lato.variable} ${josefinSans.variable}`}>
       <body>
-        <Navbar />
-        {children}
+        <div id="root">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   )
