@@ -8,10 +8,10 @@ function NavLinksModalItem({
   appendDivider,
 }: {
   isLink: boolean
-  path: string | undefined
+  path?: string
   text: string
   icon: React.ReactNode
-  appendDivider: boolean | undefined
+  appendDivider?: boolean
 }) {
   const content = (
     <span className="flex items-center gap-[12px] text-secondary">
@@ -25,13 +25,15 @@ function NavLinksModalItem({
       {isLink ? (
         <Link
           href={path || ''}
-          className='py-[6px] sm:py-[4px] px-[16px] block w-full h-full hover:bg-black-5 focus:bg-black-5 active:bg-black-10'
+          className="py-[6px] sm:py-[4px] px-[16px] block w-full h-full hover:bg-black-5 focus:bg-black-5 active:bg-black-10"
           aria-label={text}
         >
           {content}
         </Link>
       ) : (
-        <div className='py-[4px] px-[16px] w-full h-full' aria-label={text}>{content}</div>
+        <div className="py-[4px] px-[16px] w-full h-full" aria-label={text}>
+          {content}
+        </div>
       )}
 
       {appendDivider && <div className="border-b border-black-10 w-full my-[6px]" />}

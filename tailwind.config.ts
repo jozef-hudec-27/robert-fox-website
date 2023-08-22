@@ -24,6 +24,7 @@ const config: Config = {
         primary: '#FF4C80',
         secondary: '#FF6840',
         error: '#E81C0E',
+        yellow: '#FEC108'
       },
     },
     fontSize: {
