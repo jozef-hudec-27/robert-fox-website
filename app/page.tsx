@@ -1,5 +1,7 @@
 import Image from 'next/image'
-import { BsChevronDoubleDown } from 'react-icons/bs'
+import { BsChevronDoubleDown, BsMicrosoft } from 'react-icons/bs'
+import { AiOutlineAmazon, AiFillApple, AiOutlineGithub } from 'react-icons/ai'
+import { BiLogoAdobe } from 'react-icons/bi'
 import landingPage1 from '../public/assets/images/my_work/landing_page_1.png'
 import landingPage2 from '../public/assets/images/my_work/landing_page_2.png'
 import landingPage3 from '../public/assets/images/my_work/landing_page_3.png'
@@ -62,6 +64,20 @@ function IndexPage() {
           <Testimonials testimonials={testimonials} />
 
           <Image src={landingPage3} alt="Landing page 3" className="w-3/4 rounded-[24px] shadow-xl md:shadow-2xl" />
+        </div>
+      </section>
+
+      <section id="experience" className="w-full bg-primary p-[48px] sm:p-[64px] mt-[128px] md:mt-[196px] lg:mt-[256px]">
+        <div className="flex flex-col items-center gap-[32px]">
+          <h3 className="text-white font-light text-center">I had the pleasure of working with these awesome companies</h3>
+
+          <div className="flex items-center justify-center flex-wrap gap-[32px] md:gap-[48px] lg:gap-[64px] text-white text-xl sm:text-2xl">
+            <AiOutlineAmazon />
+            <BiLogoAdobe />
+            <AiFillApple />
+            <AiOutlineGithub />
+            <BsMicrosoft />
+          </div>
         </div>
       </section>
     </div>
