@@ -1,3 +1,4 @@
+import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import { Lato, Josefin_Sans } from 'next/font/google'
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div id="root">
           <Navbar />
           {children}
+          <Footer showFreelance />
         </div>
       </body>
     </html>

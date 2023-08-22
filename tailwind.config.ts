@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  important: true,
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -24,7 +25,7 @@ const config: Config = {
         primary: '#FF4C80',
         secondary: '#FF6840',
         error: '#E81C0E',
-        yellow: '#FEC108'
+        yellow: '#FEC108',
       },
     },
     fontSize: {
