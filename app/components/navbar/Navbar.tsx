@@ -27,7 +27,7 @@ function Navbar() {
         </Link>
       </div>
 
-      <div className="hidden lg:flex items-center gap-[64px]">
+      <div className="hidden xl:flex items-center gap-[64px]">
         <Link href="mailto:hello@robertfox.design" className="text-primary font-bold text-sm">
           hello@robertfox.design
         </Link>
@@ -49,7 +49,7 @@ function Navbar() {
         </Link>
       </div>
 
-      <div className="lg:hidden">
+      <div className="xl:hidden">
         <button onClick={() => setShowModal((prev) => !prev)} aria-label='Show navigation links'>
           <AiOutlineMenu className="text-black-100" />
         </button>
