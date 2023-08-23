@@ -1,6 +1,6 @@
 function Tool({ name, icon }: { name: string; icon: React.ReactNode }) {
   return (
-    <div className="flex items-center rounded-[16px] gap-[12px] px-[32px] py-[16px] border border-black-10 shadow-xl">
+    <div className="flex items-center rounded-[16px] gap-[12px] px-[32px] py-[16px] border border-black-10 shadow-lg">
       <span className="" aria-hidden>
         {icon}
       </span>
