@@ -18,3 +18,8 @@ export interface NavLink {
   icon?: React.ReactNode
   appendDivider?: boolean
 }
+
+export interface Tab {
+  title: string
+  body: React.ReactNode
+}

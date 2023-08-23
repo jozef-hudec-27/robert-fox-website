@@ -2,12 +2,22 @@ import Image from 'next/image'
 import photo1 from '../../public/assets/images/robert/robert_fox1.jpg'
 import photo2 from '../../public/assets/images/robert/robert_fox2.jpg'
 import photo3 from '../../public/assets/images/robert/robert_fox3.jpg'
+import sketch from '../../public/assets/images/tools/sketch.svg'
+import figma from '../../public/assets/images/tools/figma.svg'
+import xd from '../../public/assets/images/tools/xd.svg'
+import photoshop from '../../public/assets/images/tools/photoshop.svg'
+import illustrator from '../../public/assets/images/tools/illustrator.svg'
+import vscode from '../../public/assets/images/tools/vscode.svg'
+import github from '../../public/assets/images/tools/github.svg'
+import chatgpt from '../../public/assets/images/tools/chatgpt.svg'
 import { BsAlarm, BsTrophy, BsUniversalAccess, BsCart, BsPhone } from 'react-icons/bs'
 import Testimonials from '../components/testimonials/Testimonials'
 import testimonialAuthor1 from '../../public/assets/images/testimonials/testimonial_author_1.png'
 import testimonialAuthor2 from '../../public/assets/images/testimonials/testimonial_author_2.png'
 import SkillCard from '../components/skill/SkillCard'
-import { Skill, Testimonial } from '../interfaces'
+import { Skill, Tab, Testimonial } from '../interfaces'
+import Tabs from '../components/tabs/Tabs'
+import Tool from '../components/tool/Tool'
 
 function AboutPage() {
   const testimonials: Testimonial[] = [
@@ -43,6 +53,31 @@ function AboutPage() {
       description:
         'I recently started designing and coding mobile apps and I love it. It’s a different process compared to traditional website design but I’ve been successful in all projects so far.',
       icon: <BsPhone />,
+    },
+  ]
+
+  const tools: Tab[] = [
+    {
+      title: 'Tools I use for Design',
+      body: (
+        <div className="flex gap-[24px] sm:gap-[32px] justify-center flex-wrap mt-[48px] sm:mt-[64px]">
+          <Tool name="Sketch" icon={<Image src={sketch} alt="Sketch" height={48} />} />
+          <Tool name="Figma" icon={<Image src={figma} alt="Figma" height={48} />} />
+          <Tool name="Adobe XD" icon={<Image src={xd} alt="Adobe XD" height={48} />} />
+          <Tool name="Adobe Photoshop" icon={<Image src={photoshop} alt="Adobe Photoshop" height={48} />} />
+          <Tool name="Adobe Illustrator" icon={<Image src={illustrator} alt="Adobe Illustrator" height={48} />} />
+        </div>
+      ),
+    },
+    {
+      title: 'Tools I use for Development',
+      body: (
+        <div className="flex gap-[24px] sm:gap-[32px] justify-center flex-wrap mt-[48px] sm:mt-[64px]">
+          <Tool name="VS Code" icon={<Image src={vscode} alt="Visual Studio Code" height={48} />} />
+          <Tool name="Github" icon={<Image src={github} alt="Github" height={48} />} />
+          <Tool name="ChatGPT" icon={<Image src={chatgpt} alt="ChatGPT" height={48} />} />
+        </div>
+      ),
     },
   ]
 
@@ -136,6 +171,10 @@ function AboutPage() {
         {skills.map((skill, index) => {
           return <SkillCard key={index} skill={skill} />
         })}
+      </section>
+
+      <section id="tools" className="section mid-section w-11/12 lg:w-3/4">
+        <Tabs tabs={tools} />
       </section>
     </div>
   )
