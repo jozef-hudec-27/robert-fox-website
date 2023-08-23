@@ -6,13 +6,7 @@ import { AiFillStar } from 'react-icons/ai'
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 import TestimonialDecoration from './TestimonialDecoration'
 import NewTestimonialBtn from './NewTestimonialBtn'
-
-interface Testimonial {
-  author_image: any
-  author_name: string
-  author_location: string
-  text: string
-}
+import { Testimonial } from '@/app/interfaces'
 
 function Testimonials({ testimonials, heading }: { testimonials: Testimonial[]; heading?: string }) {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)

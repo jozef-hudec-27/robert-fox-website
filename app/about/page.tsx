@@ -6,16 +6,11 @@ import { BsAlarm, BsTrophy, BsUniversalAccess, BsCart, BsPhone } from 'react-ico
 import Testimonials from '../components/testimonials/Testimonials'
 import testimonialAuthor1 from '../../public/assets/images/testimonials/testimonial_author_1.png'
 import testimonialAuthor2 from '../../public/assets/images/testimonials/testimonial_author_2.png'
-import Skill from '../components/skill/Skill'
-
-interface Skill {
-  title: string
-  description: string
-  icon: React.ReactNode
-}
+import SkillCard from '../components/skill/SkillCard'
+import { Skill, Testimonial } from '../interfaces'
 
 function AboutPage() {
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
       author_image: testimonialAuthor1,
       author_name: 'James Wittings',
@@ -139,9 +134,7 @@ function AboutPage() {
         className="section mid-section flex justify-between flex-wrap gap-[64px] md:gap-[96px] lg:gap-[128px] w-11/12 sm:w-10/12"
       >
         {skills.map((skill, index) => {
-          const { title, description, icon } = skill
-
-          return <Skill key={index} title={title} description={description} icon={icon} />
+          return <SkillCard key={index} skill={skill} />
         })}
       </section>
     </div>

@@ -7,9 +7,10 @@ import landingPage2 from '../public/assets/images/my_work/landing_page_2.png'
 import landingPage3 from '../public/assets/images/my_work/landing_page_3.png'
 import Testimonials from './components/testimonials/Testimonials'
 import testimonialAuthor1 from '../public/assets/images/testimonials/testimonial_author_1.png'
+import { Testimonial } from './interfaces'
 
 function IndexPage() {
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
       author_image: testimonialAuthor1,
       author_name: 'James Wittings',

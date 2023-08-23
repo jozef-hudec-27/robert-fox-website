@@ -2,17 +2,10 @@ import Modal from 'react-modal'
 import { AiOutlineMail, AiOutlinePhone, AiOutlineDribbble, AiOutlineInstagram } from 'react-icons/ai'
 import { FiTwitter } from 'react-icons/fi'
 import NavLinksModalItem from './NavLinksModalItem'
+import { NavLink } from '@/app/interfaces'
 
 function NavLinksModal({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (isOpen: boolean) => void }) {
   Modal.setAppElement('#root')
-
-  interface NavLink {
-    isLink: boolean
-    path?: string
-    text: string
-    icon?: React.ReactNode
-    appendDivider?: boolean
-  }
 
   const navLinks: NavLink[] = [
     { isLink: true, path: '/', text: 'About Me', icon: null },
