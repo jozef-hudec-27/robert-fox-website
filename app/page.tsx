@@ -7,7 +7,6 @@ import landingPage2 from '../public/assets/images/my_work/landing_page_2.png'
 import landingPage3 from '../public/assets/images/my_work/landing_page_3.png'
 import Testimonials from './components/testimonials/Testimonials'
 import testimonialAuthor1 from '../public/assets/images/testimonials/testimonial_author_1.png'
-import testimonialAuthor2 from '../public/assets/images/testimonials/testimonial_author_2.png'
 
 function IndexPage() {
   const testimonials = [
@@ -17,12 +16,6 @@ function IndexPage() {
       author_location: 'Sydney, Australia',
       text: 'Working with Robert has been an absolute pleasure and we’ll definitely turn to his expertise for new projects.',
     },
-    // {
-    //   author_image: testimonialAuthor2,
-    //   author_name: 'Sandra Marks',
-    //   author_location: 'Berlin, Germany',
-    //   text: 'Robert is great. We worked together really well and we’ll definitely contract his services in the future.',
-    // },
   ]
 
   return (
@@ -69,7 +62,9 @@ function IndexPage() {
 
       <section id="experience" className="mid-section w-full bg-primary p-[48px] sm:p-[64px]">
         <div className="flex flex-col items-center gap-[32px]">
-          <h3 className="text-white font-light text-center">I had the pleasure of working with these awesome companies</h3>
+          <h3 className="text-white font-light text-center">
+            I had the pleasure of working with these awesome companies
+          </h3>
 
           <div className="flex items-center justify-center flex-wrap gap-[32px] md:gap-[48px] lg:gap-[64px] text-white text-xl sm:text-2xl">
             <AiOutlineAmazon />

@@ -3,8 +3,26 @@ import photo1 from '../../public/assets/images/robert/robert_fox1.jpg'
 import photo2 from '../../public/assets/images/robert/robert_fox2.jpg'
 import photo3 from '../../public/assets/images/robert/robert_fox3.jpg'
 import { BsAlarm, BsTrophy } from 'react-icons/bs'
+import Testimonials from '../components/testimonials/Testimonials'
+import testimonialAuthor1 from '../../public/assets/images/testimonials/testimonial_author_1.png'
+import testimonialAuthor2 from '../../public/assets/images/testimonials/testimonial_author_2.png'
 
 function AboutPage() {
+  const testimonials = [
+    {
+      author_image: testimonialAuthor1,
+      author_name: 'James Wittings',
+      author_location: 'Sydney, Australia',
+      text: 'Working with Robert has been an absolute pleasure and we’ll definitely turn to his expertise for new projects.',
+    },
+    {
+      author_image: testimonialAuthor2,
+      author_name: 'Sandra Marks',
+      author_location: 'Berlin, Germany',
+      text: 'Robert is great. We worked together really well and we’ll definitely contract his services in the future.',
+    },
+  ]
+
   return (
     <div>
       <section id="about" className="section top-section w-11/12 lg:w-3/4">
@@ -83,6 +101,10 @@ function AboutPage() {
           </div>
         </section>
       </div>
+
+      <section className="section mid-section w-11/12 md:w-4/5 xl:w-3/4">
+        <Testimonials testimonials={testimonials} heading="What My Clients Say" />
+      </section>
     </div>
   )
 }
