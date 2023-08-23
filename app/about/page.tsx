@@ -2,6 +2,7 @@ import Image from 'next/image'
 import photo1 from '../../public/assets/images/robert/robert_fox1.jpg'
 import photo2 from '../../public/assets/images/robert/robert_fox2.jpg'
 import photo3 from '../../public/assets/images/robert/robert_fox3.jpg'
+import { BsAlarm, BsTrophy } from 'react-icons/bs'
 
 function AboutPage() {
   return (
@@ -44,6 +45,38 @@ function AboutPage() {
           />
         </div>
       </section>
+
+      <div className="border-t border-b border-black-10 mt-[128px] md:mt-[196px] lg:mt-[256px]">
+        <section id="promo" className="w-11/12 lg:w-3/4 py-[36px] mx-auto">
+          <div className="flex flex-col gap-[32px] md:gap-[48px] lg:gap-[64px] w-full md:w-3/4 lg:w-1/2">
+            <h3 className="font-light">Regardless of project size, you will always get:</h3>
+
+            <div className="flex flex-col gap-[8px] sm:gap-[12px]">
+              <h4 className="gradient-text">1. On-time delivery</h4>
+              <p className="relative">
+                <span>
+                  I know time is money so I don’t want to waste yours. Or mine. So I guarantee that I will always
+                  deliver what you pay for as promised.
+                </span>
+
+                <BsAlarm className="absolute -right-[48px] sm:-right-[64px] top-1/2 -translate-y-1/2 text-black-25 text-xl sm:text-2xl rotate-[16deg]" />
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-[8px] sm:gap-[12px]">
+              <h4 className="gradient-text">2. Quality</h4>
+              <p className="relative">
+                <span>
+                  I don’t want to put my name on something subpar so my first concern is always quality. No matter what,
+                  you will love the end result.
+                </span>
+
+                <BsTrophy className="absolute -right-[48px] sm:-right-[64px] top-1/2 -translate-y-1/2 text-black-25 text-xl sm:text-2xl -rotate-[12deg]" />
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   )
 }

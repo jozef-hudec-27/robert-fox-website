@@ -42,19 +42,11 @@ p {
   @apply text-[18px] sm:text-base;
 }
 
-.gradient-50 {
-  @apply from-secondary to-primary;
-}
-
-.gradient-75 {
-  @apply from-secondary via-secondary to-primary;
-}
-
 .gradient-text {
-  @apply bg-gradient-to-r bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent;
 }
 
 .gradient-bg {
-  @apply bg-gradient-to-r;
+  @apply bg-gradient-to-r from-secondary to-primary;
 }
 /* GENERAL-- */

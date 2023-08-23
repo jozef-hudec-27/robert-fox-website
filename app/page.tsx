@@ -33,7 +33,7 @@ function IndexPage() {
       >
         <h3 className="font-light">Hey there, I'm Robert</h3>
 
-        <h1 className="gradient-text gradient-50 text-center">Freelance UI Designer & Web Developer</h1>
+        <h1 className="gradient-text text-center">Freelance UI Designer & Web Developer</h1>
 
         <p className="w-full lg:w-1/2 text-center">
           I help business grow by crafting amazing web experiences. If you’re looking for a designer and developer that
