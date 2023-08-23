@@ -2,10 +2,17 @@ import Image from 'next/image'
 import photo1 from '../../public/assets/images/robert/robert_fox1.jpg'
 import photo2 from '../../public/assets/images/robert/robert_fox2.jpg'
 import photo3 from '../../public/assets/images/robert/robert_fox3.jpg'
-import { BsAlarm, BsTrophy } from 'react-icons/bs'
+import { BsAlarm, BsTrophy, BsUniversalAccess, BsCart, BsPhone } from 'react-icons/bs'
 import Testimonials from '../components/testimonials/Testimonials'
 import testimonialAuthor1 from '../../public/assets/images/testimonials/testimonial_author_1.png'
 import testimonialAuthor2 from '../../public/assets/images/testimonials/testimonial_author_2.png'
+import Skill from '../components/skill/Skill'
+
+interface Skill {
+  title: string
+  description: string
+  icon: React.ReactNode
+}
 
 function AboutPage() {
   const testimonials = [
@@ -20,6 +27,27 @@ function AboutPage() {
       author_name: 'Sandra Marks',
       author_location: 'Berlin, Germany',
       text: 'Robert is great. We worked together really well and we’ll definitely contract his services in the future.',
+    },
+  ]
+
+  const skills: Skill[] = [
+    {
+      title: 'I can design and build a responsive and accessible  website',
+      description:
+        'My goal is to build accessible and responsive user interfaces for the web and mobile, while preserving the best practices for proper user experience. ',
+      icon: <BsUniversalAccess />,
+    },
+    {
+      title: 'I can design and build an eCommerce store',
+      description:
+        'I have extensive knowledge of development on the front-end and back-end so I’m able to deliver a completely functional eCommerce website.',
+      icon: <BsCart />,
+    },
+    {
+      title: 'I can design and build a mobile app for iOS and Android',
+      description:
+        'I recently started designing and coding mobile apps and I love it. It’s a different process compared to traditional website design but I’ve been successful in all projects so far.',
+      icon: <BsPhone />,
     },
   ]
 
@@ -102,8 +130,19 @@ function AboutPage() {
         </section>
       </div>
 
-      <section className="section mid-section w-11/12 md:w-4/5 xl:w-3/4">
+      <section className="section mid-section w-11/12 md:w-4/5 lg:w-3/4">
         <Testimonials testimonials={testimonials} heading="What My Clients Say" />
+      </section>
+
+      <section
+        id="skills"
+        className="section mid-section flex justify-between flex-wrap gap-[64px] md:gap-[96px] lg:gap-[128px] w-11/12 sm:w-10/12"
+      >
+        {skills.map((skill, index) => {
+          const { title, description, icon } = skill
+
+          return <Skill key={index} title={title} description={description} icon={icon} />
+        })}
       </section>
     </div>
   )
