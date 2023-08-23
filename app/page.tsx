@@ -29,7 +29,7 @@ function IndexPage() {
     <div>
       <section
         id="hero"
-        className="flex flex-col items-center gap-[12px] md:gap-[24px] lg:gap-[32px] w-11/12 lg:w-3/4 mx-auto mt-[48px]"
+        className="section top-section flex flex-col items-center gap-[12px] md:gap-[24px] lg:gap-[32px] w-11/12 lg:w-3/4"
       >
         <h3 className="font-light">Hey there, I'm Robert</h3>
 
@@ -48,7 +48,7 @@ function IndexPage() {
 
       <section
         id="my-work"
-        className="flex flex-col items-center gap-[36px] md:gap-[64px] lg:gap-[84px] w-full lg:w-3/4 mx-auto mt-[128px] md:mt-[196px] lg:mt-[256px]"
+        className="section mid-section flex flex-col items-center gap-[36px] md:gap-[64px] lg:gap-[84px] w-full lg:w-3/4"
       >
         <div className="flex flex-col items-center gap-[12px] md:gap-[24px] lg:gap-[32px]">
           <h2>My Work</h2>
@@ -67,7 +67,7 @@ function IndexPage() {
         </div>
       </section>
 
-      <section id="experience" className="w-full bg-primary p-[48px] sm:p-[64px] mt-[128px] md:mt-[196px] lg:mt-[256px]">
+      <section id="experience" className="mid-section w-full bg-primary p-[48px] sm:p-[64px]">
         <div className="flex flex-col items-center gap-[32px]">
           <h3 className="text-white font-light text-center">I had the pleasure of working with these awesome companies</h3>
 

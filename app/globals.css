@@ -50,3 +50,15 @@ p {
   @apply bg-gradient-to-r from-secondary to-primary;
 }
 /* GENERAL-- */
+
+.top-section {
+  @apply mt-[48px];
+}
+
+.mid-section {
+  @apply mt-[128px] md:mt-[196px] lg:mt-[256px];
+}
+
+.section {
+  @apply mx-auto;
+}

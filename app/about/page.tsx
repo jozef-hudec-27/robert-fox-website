@@ -7,7 +7,7 @@ import { BsAlarm, BsTrophy } from 'react-icons/bs'
 function AboutPage() {
   return (
     <div>
-      <section id="about" className="w-11/12 lg:w-3/4 mx-auto mt-[48px]">
+      <section id="about" className="section top-section w-11/12 lg:w-3/4">
         <div className="flex flex-col gap-[24px] sm:gap-[32px] w-full md:w-2/3 lg:w-1/2">
           <h2>I'm Robert Fox.</h2>
           <p>
@@ -46,8 +46,8 @@ function AboutPage() {
         </div>
       </section>
 
-      <div className="border-t border-b border-black-10 mt-[128px] md:mt-[196px] lg:mt-[256px]">
-        <section id="promo" className="w-11/12 lg:w-3/4 py-[36px] mx-auto">
+      <div className="mid-section 2xl:mt-[448px] border-t border-b border-black-10">
+        <section id="promo" className="section w-11/12 lg:w-3/4 py-[36px]">
           <div className="flex flex-col gap-[32px] md:gap-[48px] lg:gap-[64px] w-full md:w-3/4 lg:w-1/2">
             <h3 className="font-light">Regardless of project size, you will always get:</h3>
 
@@ -59,7 +59,10 @@ function AboutPage() {
                   deliver what you pay for as promised.
                 </span>
 
-                <BsAlarm className="absolute -right-[48px] sm:-right-[64px] top-1/2 -translate-y-1/2 text-black-25 text-xl sm:text-2xl rotate-[16deg]" />
+                <BsAlarm
+                  className="hidden md:block absolute -right-[64px] top-1/2 -translate-y-1/2 text-black-25 sm:text-2xl rotate-[16deg]"
+                  aria-hidden
+                />
               </p>
             </div>
 
@@ -71,7 +74,10 @@ function AboutPage() {
                   you will love the end result.
                 </span>
 
-                <BsTrophy className="absolute -right-[48px] sm:-right-[64px] top-1/2 -translate-y-1/2 text-black-25 text-xl sm:text-2xl -rotate-[12deg]" />
+                <BsTrophy
+                  className="hidden md:block absolute -right-[64px] top-1/2 -translate-y-1/2 text-black-25 sm:text-2xl -rotate-[12deg]"
+                  aria-hidden
+                />
               </p>
             </div>
           </div>
