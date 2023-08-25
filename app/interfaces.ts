@@ -23,3 +23,8 @@ export interface Tab {
   title: string
   body: React.ReactNode
 }
+
+export interface AccordionItem {
+  title: string
+  body: string
+}
