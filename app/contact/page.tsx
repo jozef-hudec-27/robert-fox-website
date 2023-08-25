@@ -3,6 +3,10 @@ import { BsEnvelope, BsTelephone, BsArrowUpRight } from 'react-icons/bs'
 import Accordion from '../components/accordion/Accordion'
 import { faq } from './info'
 
+export const metadata = {
+  title: 'Contact',
+}
+
 function ContactPage() {
   return (
     <div>
@@ -40,7 +44,10 @@ function ContactPage() {
         </div>
       </section>
 
-      <section id="contact" className="section mid-section flex items-center justify-between gap-[32px] sm:gap-[64px] flex-col xl:flex-row w-11/12 lg:w-3/4">
+      <section
+        id="contact"
+        className="section mid-section flex items-center justify-between gap-[32px] sm:gap-[64px] flex-col xl:flex-row w-11/12 lg:w-3/4"
+      >
         <div className="flex flex-col gap-[8px] sm:gap-[16px] flex-1">
           <h2>Got a project in mind?</h2>
           <p>Use the form to give me as much detail as possible and I'll get back to you as soon as I can</p>
@@ -49,7 +56,13 @@ function ContactPage() {
         <form action="/" className="flex flex-col gap-[16px] sm:gap-[32px] flex-1 w-full xl:w-auto">
           <div className="flex gap-[16px] sm:gap-[8px] flex-col sm:flex-row">
             <input type="text" className="input primary flex-1" placeholder="Name" aria-label="Name" required />
-            <input type="email" className="input primary flex-1" placeholder="Email address" aria-label="Email" required />
+            <input
+              type="email"
+              className="input primary flex-1"
+              placeholder="Email address"
+              aria-label="Email"
+              required
+            />
           </div>
 
           <textarea

@@ -9,6 +9,12 @@ import Testimonials from './components/testimonials/Testimonials'
 import testimonialAuthor1 from '../public/assets/images/testimonials/testimonial_author_1.png'
 import { Testimonial } from './interfaces'
 
+export const metadata = {
+  title: {
+    absolute: 'Robert Fox | Freelance UI Designer & Web Developer',
+  },
+}
+
 function IndexPage() {
   const testimonials: Testimonial[] = [
     {

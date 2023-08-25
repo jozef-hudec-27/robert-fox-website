@@ -8,8 +8,8 @@ function NavLinksModal({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (isO
   Modal.setAppElement('#root')
 
   const navLinks: NavLink[] = [
-    { isLink: true, path: '/', text: 'About Me', icon: null },
-    { isLink: true, path: '/', text: 'Contact', icon: null, appendDivider: true },
+    { isLink: true, path: '/about', text: 'About Me', icon: null },
+    { isLink: true, path: '/contact', text: 'Contact', icon: null, appendDivider: true },
     { isLink: true, path: '/', text: 'Instagram', icon: <AiOutlineInstagram /> },
     { isLink: true, path: '/', text: 'Twitter', icon: <FiTwitter /> },
     { isLink: true, path: '/', text: 'Dribbble', icon: <AiOutlineDribbble />, appendDivider: true },

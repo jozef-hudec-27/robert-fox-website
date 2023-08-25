@@ -8,6 +8,10 @@ import SkillCard from '../components/skill/SkillCard'
 import Tabs from '../components/tabs/Tabs'
 import { testimonials, skills, tools } from './info'
 
+export const metadata = {
+    title: 'About'
+}
+
 function AboutPage() {
   return (
     <div>
