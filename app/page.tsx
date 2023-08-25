@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { BsChevronDoubleDown, BsMicrosoft } from 'react-icons/bs'
+import { BsMicrosoft } from 'react-icons/bs'
 import { AiOutlineAmazon, AiFillApple, AiOutlineGithub } from 'react-icons/ai'
 import { BiLogoAdobe } from 'react-icons/bi'
 import landingPage1 from '../public/assets/images/my_work/landing_page_1.png'
@@ -8,6 +8,7 @@ import landingPage3 from '../public/assets/images/my_work/landing_page_3.png'
 import Testimonials from './components/testimonials/Testimonials'
 import testimonialAuthor1 from '../public/assets/images/testimonials/testimonial_author_1.png'
 import { Testimonial } from './interfaces'
+import SeeMyWorkBtn from './components/SeeMyWorkBtn'
 
 export const metadata = {
   title: {
@@ -40,10 +41,7 @@ function IndexPage() {
           likes to get stuff done, let’s talk.
         </p>
 
-        <button className="btn primary w-full sm:w-fit mt-[32px] md:mt-[48px] lg:mt-[64px]">
-          <span>See my work</span>
-          <BsChevronDoubleDown aria-hidden />
-        </button>
+        <SeeMyWorkBtn />
       </section>
 
       <section
