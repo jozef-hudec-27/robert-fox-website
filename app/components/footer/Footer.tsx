@@ -1,8 +1,14 @@
+'use client'
+
 import Link from 'next/link'
 import { AiOutlineDribbble, AiOutlineInstagram } from 'react-icons/ai'
 import { FiTwitter } from 'react-icons/fi'
+import { usePathname } from 'next/navigation'
 
-function Footer({ showFreelance }: { showFreelance?: boolean }) {
+function Footer() {
+  const pathname = usePathname()
+  const showFreelance = pathname !== '/contact'
+
   return (
     <footer
       className={`flex flex-col items-center mt-[256px] ${showFreelance && 'border-t'} border-black-10 border-solid`}
@@ -14,11 +20,11 @@ function Footer({ showFreelance }: { showFreelance?: boolean }) {
             <p>If you're looking for a designer and developer that likes to get stuff done, let's talk.</p>
           </div>
 
-          <Link href="/about" className="sm:block hidden btn primary w-fit">
+          <Link href="/contact" className="sm:block hidden btn primary w-fit">
             Got a project in mind? Let's talk!
           </Link>
 
-          <Link href="/about" className="sm:hidden btn primary w-fit">
+          <Link href="/contact" className="sm:hidden btn primary w-fit">
             Let's talk!
           </Link>
         </div>

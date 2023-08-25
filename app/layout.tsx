@@ -18,8 +18,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div id="root">
           <Navbar />
           {children}
-          <Footer showFreelance />
+          <Footer />
         </div>
+
+        {/* Used for filling svg's with gradient */}
+        <svg className="w-0 h-0 absolute" focusable="false" aria-hidden>
+          <linearGradient id="svg-gradient" x2="1" y2="1">
+            <stop offset="0%" stopColor="#FF6840" />
+            <stop offset="100%" stopColor="#FF4C80" />
+          </linearGradient>
+        </svg>
       </body>
     </html>
   )
