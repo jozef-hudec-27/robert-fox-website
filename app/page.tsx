@@ -36,7 +36,7 @@ function IndexPage() {
 
         <button className="btn primary w-full sm:w-fit mt-[32px] md:mt-[48px] lg:mt-[64px]">
           <span>See my work</span>
-          <BsChevronDoubleDown />
+          <BsChevronDoubleDown aria-hidden />
         </button>
       </section>
 
