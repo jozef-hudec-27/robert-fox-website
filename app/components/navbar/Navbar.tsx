@@ -1,15 +1,19 @@
 'use client'
 
-import { useState } from 'react'
+import { use, useState } from 'react'
 import Image from 'next/image'
 import logo from '../../../public/assets/images/Logo.svg'
 import Link from 'next/link'
 import { AiOutlineDribbble, AiOutlineInstagram, AiOutlineMenu } from 'react-icons/ai'
 import { FiTwitter } from 'react-icons/fi'
 import NavLinksModal from './nav_links_modal/NavLinksModal'
+import { usePathname } from 'next/navigation'
 
 function Navbar() {
   const [showModal, setShowModal] = useState(false)
+  const pathname = usePathname()
+
+  const activeLinkClass = 'gradient-text line-through decoration-solid decoration-secondary decoration-2'
 
   return (
     <nav className="p-[48px] flex items-center justify-between border-b border-black-10 border-solid">
@@ -18,11 +22,21 @@ function Navbar() {
           <Image src={logo} alt="Logo" />
         </Link>
 
-        <Link href="/about" className="hidden sm:block font-josefinSans text-black-100 text-sm">
+        <Link
+          href="/about"
+          className={`hidden sm:block font-josefinSans text-sm ${
+            pathname === '/about' ? activeLinkClass : 'text-black-100'
+          }`}
+        >
           About Me
         </Link>
 
-        <Link href="contact" className="hidden sm:block font-josefinSans text-black-100 text-sm">
+        <Link
+          href="contact"
+          className={`hidden sm:block font-josefinSans text-sm ${
+            pathname === '/contact' ? activeLinkClass : 'text-black-100'
+          }`}
+        >
           Contact
         </Link>
       </div>
@@ -50,7 +64,7 @@ function Navbar() {
       </div>
 
       <div className="xl:hidden">
-        <button onClick={() => setShowModal((prev) => !prev)} aria-label='Show navigation links'>
+        <button onClick={() => setShowModal((prev) => !prev)} aria-label="Show navigation links">
           <AiOutlineMenu className="text-black-100" />
         </button>
 
