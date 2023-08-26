@@ -5,6 +5,8 @@ import { faq } from './info'
 
 export const metadata = {
   title: 'Contact',
+  description:
+    'I’m currently available for freelance work. If you’re looking for a designer and developer that likes to get stuff done, let’s talk.',
 }
 
 function ContactPage() {

@@ -9,7 +9,9 @@ import Tabs from '../components/tabs/Tabs'
 import { testimonials, skills, tools } from './info'
 
 export const metadata = {
-    title: 'About'
+  title: 'About',
+  description:
+    'I was born in Henderson, Nevada almost three decades ago. From an early age I showed interest for computers and that grew into a passion during high school.',
 }
 
 function AboutPage() {

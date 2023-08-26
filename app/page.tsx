@@ -13,6 +13,8 @@ import SeeMyWorkBtn from './components/SeeMyWorkBtn'
 export const metadata = {
   title: {
     absolute: 'Robert Fox | Freelance UI Designer & Web Developer',
+    description:
+      'I help business grow by crafting amazing web experiences. If you’re looking for a designer and developer that likes to get stuff done, let’s talk.',
   },
 }
 
