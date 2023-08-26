@@ -28,17 +28,25 @@ function Testimonials({ testimonials, heading }: { testimonials: Testimonial[]; 
       )}
 
       <Image
+        key={`testimonial-author-image-${currentTestimonial}`}
         src={testimonials[currentTestimonial].author_image}
         alt={`Testimonial ${currentTestimonial + 1} author`}
-        className="w-[96px] h-[96px] rounded-full drop-shadow-xl"
+        className="animate-fade-in w-[96px] h-[96px] rounded-full drop-shadow-xl"
       />
 
-      <div className="flex flex-col items-center relative z-10">
+      <div
+        key={`testimonial-author-info-${currentTestimonial}`}
+        className="animate-fade-in flex flex-col items-center relative z-10"
+      >
         <p className="font-josefinSans font-bold">{testimonials[currentTestimonial].author_name}</p>
         <p>{testimonials[currentTestimonial].author_location}</p>
       </div>
 
-      <div className="flex gap-[12px] relative z-10" aria-hidden>
+      <div
+        key={`testimonial-rating-${currentTestimonial}`}
+        className="animate-fade-in flex gap-[12px] relative z-10"
+        aria-hidden
+      >
         {[1, 2, 3, 4, 5].map((i) => {
           return <AiFillStar key={i} className="text-yellow text-lg sm:text-xl" />
         })}
@@ -53,7 +61,9 @@ function Testimonials({ testimonials, heading }: { testimonials: Testimonial[]; 
           className="text-black-10 text-lg sm:text-xl absolute right-0 top-[24px] sm:top-[32px] z-10"
           aria-hidden
         />
-        <span className="relative text-black-100 z-10">{testimonials[currentTestimonial].text}</span>
+        <span key={`testimonial-text-${currentTestimonial}`} className="animate-fade-in relative text-black-100 z-10">
+          {testimonials[currentTestimonial].text}
+        </span>
         {testimonials.length > 1 && (
           <>
             <NewTestimonialBtn

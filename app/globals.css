@@ -4,6 +4,7 @@
 
 @import './styles/button.css';
 @import './styles/input.css';
+@import './styles/animations.css';
 
 /* --GENERAL */
 html {
