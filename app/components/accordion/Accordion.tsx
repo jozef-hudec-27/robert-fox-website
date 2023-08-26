@@ -22,13 +22,15 @@ function Accordion({ accordionItems }: { accordionItems: AccordionItemInterface[
       }}
     >
       {accordionItems.map((item, index) => {
+        const isActive = selected === index
+
         return (
           <AccordionItem key={index} uuid={index}>
             <AccordionItemHeading>
               <AccordionItemButton className="flex items-center justify-between gap-[2px] px-[4px] py-[8px] text-black-75 hover:text-black-100 focus:text-black-100 text-[18px] sm:text-base">
                 <span className="w-fit">{item.title}</span>{' '}
-                <BsChevronDown className={`${selected === index && 'hidden'} min-w-[18px]`} aria-hidden />
-                <BsChevronUp className={`${selected !== index && 'hidden'} min-w-[18px]`} aria-hidden />
+                <BsChevronDown className={`${isActive && 'hidden'} min-w-[18px]`} aria-hidden />
+                <BsChevronUp className={`${!isActive && 'hidden'} min-w-[18px]`} aria-hidden />
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
