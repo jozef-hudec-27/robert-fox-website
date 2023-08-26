@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Assignment: Design and Develop Website for Robert Fox
 
-## Getting Started
+We have been hired by Robert Fox to design and build him a personal website.
 
-First, run the development server:
+## Client Information
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Robert Fox is a 30 year old New York based Freelance UI Designer and Web Developer. He has experience working with big corporations like Apple and Microsoft.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Logo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Robert has provided us with his logo that we'll use in the design.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![Robert Fox logo](https://raw.githubusercontent.com/jozef-hudec-27/robert-fox-website/74408ef02668c070972f180251562eeb29324d33/public/assets/images/Logo.svg)
 
-## Learn More
+## Website Structure
 
-To learn more about Next.js, take a look at the following resources:
+Robert would like a 3-page website that would showcase his work,
+provide information about his services and allow potential
+customers to contact him. The 3 pages are:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Home Page
+- About me
+- Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Home Page
 
-## Deploy on Vercel
+The home page should show a short description of who Robert is
+and what he does, along with a collection of his projects and a
+call-to-action to the contact page.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+He would also like to see logos of companies he worked with and
+maybe some testimonials.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### About me Page
+
+The about me page should provide more information about
+Robert, some pictures of him, his services and main advantages,
+testimonials and a list of tools Robert uses for design and
+development.
+
+### Contact Page
+
+The contact page is all about providing ways for clients to reach
+Robert: contact form, phone number and email.
+
+Also, Robert would like an F.A.Q. section.
+
+## Design Guidelines
+
+Robert wants a modern looking website that would be easy to use
+by anyone. He likes to keep things clean and simple and loves
+designs with lots of whitespace.
+
+In terms of color, he really likes the color scheme of his logo so the
+website should mirror that in some shape or form.
+
+Robert also wants the site to be responsive, so we have to make sure it looks good on all screen sizes (mobile, tablet, desktop).
+
+# Note
+
+Please note that the information here is fictional and this website was built strictly for educational purposes.
+
+[See it live](https://robert-fox-website.vercel.app/)
